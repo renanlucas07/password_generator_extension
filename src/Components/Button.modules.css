@@ -1,0 +1,28 @@
+.button {
+  position: relative;
+  text-align: center;
+  background-color: #aed581;
+  border: none;
+  font-size: 16px;
+  color: #100e00;
+  transition-duration: 0.1s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  width: 8rem;
+  margin-right: 2rem;
+  font-family: var(--type);
+  font-weight: 400;
+}
+
+.button:hover,
+.button:active {
+  outline: none;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 4px #777;
+}
+.button:active {
+  outline: none;
+  box-shadow: 0 0 0 3px #b2ff59, 0 0 0 1px rgb(219, 230, 235);
+  background-color: #8bc34a;
+}

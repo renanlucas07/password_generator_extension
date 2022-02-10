@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.title {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: var(--type);
+  font-weight: 400;
+  color: #333;
+}
+
+.version {
+  font-family: var(--type);
+  font-weight: 400;
+  color: gray;
+}

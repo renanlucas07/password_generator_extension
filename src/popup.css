@@ -1,35 +1,41 @@
-.button {
-  position: relative;
-  background-color: #050505;
-  border: none;
-  font-size: 14px;
-  color: #FFFFFF;
-  padding: 20px;
-  width: 100px;
-  text-align: center;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap");
 
-.button:after {
-  content: "";
-  background: #353535;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px!important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s
-}
-
-.button:active:after {
-  padding: 0;
+body {
   margin: 0;
-  opacity: 1;
-  transition: 0s;
+  padding: 0;
+  box-sizing: border-box;
+  --type: "Poppins", Georgia;
+}
+
+.PopupContainer {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 384px;
+  min-height: 180px;
+  align-items: center;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.PopupHeader {
+  border-radius: 0.4rem;
+  border-bottom: 0.5px solid #dadada;
+}
+
+.PopupDescription {
+  display: grid;
+  width: 70%;
+}
+.PopupDescription p {
+  font-family: var(--type);
+  line-height: 1.5rem;
+  color: black;
+  font-weight: 200;
+}
+
+h1,
+p,
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
