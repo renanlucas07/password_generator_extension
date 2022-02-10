@@ -1,4 +1,4 @@
-#generate {
+.button {
   position: relative;
   background-color: #050505;
   border: none;
@@ -14,7 +14,7 @@
   cursor: pointer;
 }
 
-#generate:after {
+.button:after {
   content: "";
   background: #353535;
   display: block;
@@ -27,7 +27,7 @@
   transition: all 0.8s
 }
 
-#generate:active:after {
+.button:active:after {
   padding: 0;
   margin: 0;
   opacity: 1;
