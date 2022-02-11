@@ -1,0 +1,7 @@
+.description {
+  font-family: var(--type);
+  line-height: 1.5rem;
+  color: rgb(69, 76, 83);
+  font-weight: 200;
+  font-size: 14px;
+}
