@@ -12,15 +12,24 @@ function Popup() {
 
   const executeScript = async () => {
     let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-    chrome.scripting.executeScript({
-      target: { tabId: tab.id },
-      func: generatePassword,
-    });
+    
+    chrome.scripting.executeScript(
+      {
+        target: { tabId: tab.id },
+        func: generatePassword,
+      },
+      (injectionResults) => {
+        for (const frameResult of injectionResults)
+          setHost(frameResult.result);
+      });
   };
   const generatePassword = () => {
-    let hostname = window.location.hostname;
-    console.log(hostname);
-    chrome.storage.sync.get('cypher', ({ cypher }) => {});
+    const hostname = window.location.hostname;
+    chrome.storage.sync.get('cypher', ({ cypher }) => {
+    
+    });
+
+    return hostname;
   };
 
   return (
