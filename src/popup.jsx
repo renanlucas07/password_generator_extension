@@ -1,14 +1,14 @@
-import React from "react";
-import { render } from "react-dom";
-import "core-js/stable";
-import "regenerator-runtime/runtime";
-import "./popup.css";
-import Header from "./Components/Header";
-import ShowPassword from "./Components/ShowPassword";
-import Description from "./Components/Description";
+import React from 'react';
+import { render } from 'react-dom';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+import './popup.css';
+import Header from './Components/Header';
+import ShowPassword from './Components/ShowPassword';
+import Description from './Components/Description';
 
 function Popup() {
-  const [host, setHost] = React.useState("");
+  const [host, setHost] = React.useState('');
 
   const executeScript = async () => {
     let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
@@ -20,7 +20,7 @@ function Popup() {
   const generatePassword = () => {
     let hostname = window.location.hostname;
     console.log(hostname);
-    chrome.storage.sync.get("cypher", ({ cypher }) => {});
+    chrome.storage.sync.get('cypher', ({ cypher }) => {});
   };
 
   return (
@@ -38,4 +38,4 @@ function Popup() {
   );
 }
 
-render(<Popup />, document.getElementById("react-target"));
+render(<Popup />, document.getElementById('react-target'));
