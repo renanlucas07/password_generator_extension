@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0;
+  margin: 0;
 }
 
 .title {
@@ -10,11 +11,22 @@
   font-size: 20px;
   font-family: var(--type);
   font-weight: 400;
-  color: #333;
+  color: rgb(0, 8, 54);
 }
 
 .version {
   font-family: var(--type);
   font-weight: 400;
   color: gray;
+}
+
+.iconHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  color: #26617c;
+  height: 18px;
 }

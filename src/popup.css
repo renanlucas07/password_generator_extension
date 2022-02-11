@@ -10,26 +10,22 @@ body {
 .PopupContainer {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  width: 384px;
+  width: 400px;
   min-height: 180px;
   align-items: center;
+  align-content: center;
   padding: 0 1rem 1rem 1rem;
 }
 
 .PopupHeader {
+  padding-bottom: 0.5rem;
   border-radius: 0.4rem;
   border-bottom: 0.5px solid #dadada;
 }
 
 .PopupDescription {
-  display: grid;
+  display: flex;
   width: 70%;
-}
-.PopupDescription p {
-  font-family: var(--type);
-  line-height: 1.5rem;
-  color: black;
-  font-weight: 200;
 }
 
 h1,
