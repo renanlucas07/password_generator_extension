@@ -7,10 +7,6 @@ module.exports = {
     popup: './src/popup.jsx',
     background: './src/background.js',
   },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
-  },
   module: {
     rules: [
       {
