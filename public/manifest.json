@@ -1,7 +1,7 @@
 {
   "name": "Password Generator",
-  "description": "Generate passwords based on cypher and url",
-  "version": "1.0",
+  "description": "Generate passwords based on a secret key and the domain of the current site, run completely offline, and on the client side, we don't store your passwords!",
+  "version": "0.1",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
