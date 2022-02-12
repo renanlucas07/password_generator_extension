@@ -22,7 +22,9 @@ function Popup() {
     
     let password;
     password = CryptoJS.HmacMD5(domain, secretKey).toString();
-    setHost(`${password.substring(15, 25).toUpperCase()}*${password.substring(26,35)}`);
+    password = password.substring(15, 20).toUpperCase() +
+               password.substring(20, 30).match(/.{5}/g).join('#');
+    setHost(password);
   };
 
   return (
@@ -34,7 +36,12 @@ function Popup() {
         <Description />
       </div>
       <div className="PopupContent">
-        <ShowPassword onChangeSecretKey={onChangeSecretKey} secretKey={secretKey} value={host} onClick={() => executeScript()} />
+        <ShowPassword 
+          onChangeSecretKey={onChangeSecretKey}
+          secretKey={secretKey} 
+          value={host}
+          onClick={() => executeScript()}
+        />
       </div>
     </div>
   );
