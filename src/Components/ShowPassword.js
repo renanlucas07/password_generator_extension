@@ -1,8 +1,8 @@
-import React from "react";
-import Button from "./Button";
-import styles from "./ShowPassword.modules.css";
-import { faEyeSlash, faEye } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import Button from './Button';
+import styles from './ShowPassword.modules.css';
+import { faEyeSlash, faEye } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ShowPassword = ({ value, onClick }) => {
   const [passwordShown, setPasswordShown] = React.useState(false);
@@ -16,9 +16,9 @@ const ShowPassword = ({ value, onClick }) => {
   return (
     <div className={styles.passWrapper}>
       <Button onClick={onClick}>Generate</Button>
-      <div className={styles.test}>
+      <div className={styles.passwordContainer}>
         <input
-          type={passwordShown ? "text" : "password"}
+          type={passwordShown ? 'text' : 'password'}
           disabled
           value={value}
           className={styles.input}

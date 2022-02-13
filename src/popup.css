@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --type: "Poppins", Georgia;
+  --type: 'Poppins', Georgia;
 }
 
 .PopupContainer {
@@ -26,6 +26,10 @@ body {
 .PopupDescription {
   display: flex;
   width: 70%;
+}
+
+.PopupContent {
+  border-top: 0.5px solid #dadada;
 }
 
 h1,
